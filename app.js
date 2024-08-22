@@ -9,6 +9,8 @@ middleware = (req, res, next) => {
 app.use(express.json());
 require("./db/conn");
 
+app.use(require("./router/auth"));
+
 app.listen(3000, () => {
   console.log("Port no: 3000 is running");
 });
