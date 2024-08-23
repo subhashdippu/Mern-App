@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+.header {
+  font-size: 6rem;
+  margin: 0;
+}
+
+.message {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.home-link {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border-radius: 5px;
+  text-decoration: none;
+}
