@@ -11,6 +11,6 @@ require("./db/conn");
 
 app.use(require("./router/auth"));
 
-app.listen(3000, () => {
+app.listen(3004, () => {
   console.log("Port no: 3000 is running");
 });
