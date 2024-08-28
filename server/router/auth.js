@@ -2,12 +2,18 @@ const express = require("express");
 const app = express();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const authenticate = require("../middleware/authentication");
 require("../db/conn");
 const User = require("../model/userSchema");
 
 app.get("/", (req, res) => {
   console.log("Hello this is the home page");
   res.send("Hello this is the home page");
+});
+app.get("/about", authenticate, (req, res) => {
+  console.log("Hello this is the home page");
+  // res.send("Hello this is the home page");
+  res.send(req.rootUser);
 });
 
 app.post("/register", async (req, res) => {
